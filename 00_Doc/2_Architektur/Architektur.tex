@@ -86,7 +86,7 @@ Die Struktur der LogMessages, welche auch über den Adapter in Textfiles gespeic
 \subsection{Entwurfsentscheide}
 \subsubsection{Event / Listener Pattern}
 Das Event/Listener-Pattern wurde in Bezug auf den Logger-Server verwendet. Da der Logger-Server einen LoggerServerSocket beinhaltet, dieser jedoch dem Logger-Server die neuen Messages mitteilen muss, entsteht eine zirkuläre Beziehung zwischen diesen beiden Objekten. 
-Um diese zirkuläre Beziehung aufzulösen und dadurch die Kopplung zu minimieren wird das Event/Listener-Pattern eingesetzt. Dadurch kommuniziert der LoggerServerSocket nur noch über das definierte Interface mit dem LoggerServer. Die komplette LoggerServer-Komponente ist unter Abbilung \ref{fig:Logger-Server Klassendiagramm} ersichtlich.
+Um diese zirkuläre Beziehung aufzulösen und dadurch die Kopplung zu minimieren wird das Event / Listener-Pattern eingesetzt. Dadurch kommuniziert der LoggerServerSocket nur noch über das definierte Interface mit dem LoggerServer. Die komplette LoggerServer-Komponente ist unter Abbilung \ref{fig:Logger-Server Klassendiagramm} ersichtlich.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{2_Architektur/Bilder/loggerServer_EventListener.png}
