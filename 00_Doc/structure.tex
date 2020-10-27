@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{amsmath, amsfonts, amsthm} % Math packages
+\usepackage[ngerman]{babel}
+\usepackage{tabularx} % package to create tables
+
+\usepackage{listings} % Code listings, with syntax highlighting
+
+\usepackage{float} % Enables [H] positioning option for figures
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref} % for hyperlinks
+\graphicspath{{Figures/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage{enumitem} % Required for list customisation
+\setlist{noitemsep} % No spacing between list items
+
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0.0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,48}
+
+\usepackage{cite}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=2.5cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=3cm, % Left margin
+	right=3cm, % Right margin
+	headheight=0.75cm, % Header height
+	footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.75cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Use 8-bit encoding
+
+\usepackage{fourier} % Use the Adobe Utopia font for the document
+
+%----------------------------------------------------------------------------------------
+%	SECTION TITLES
+%----------------------------------------------------------------------------------------
+
+\usepackage{sectsty} % Allows customising section commands
+
+\sectionfont{\vspace{6pt}\normalfont\scshape} % \section{} styling
+\subsectionfont{\normalfont\bfseries} % \subsection{} styling
+\subsubsectionfont{\normalfont\bfseries} % \subsubsection{} styling
+\paragraphfont{\normalfont\scshape} % \paragraph{} styling
+
+\usepackage[titles]{tocloft} %customizable table of content
+
+%----------------------------------------------------------------------------------------
+%	Hyper Links Setup - Definition of the different links styles
+%----------------------------------------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+\usepackage{scrlayer-scrpage} % Required for customising headers and footers
+
+\ohead*{Team 4} % Right header
+\ihead*{Message Logger} % Left header
+\chead*{} % Centre header
+
+\ofoot*{\pagemark} % Right footer
+\ifoot*{System-Spezifikation – Inspiriert von Standards des Institute of Electrical and Electronics Engineers} % Left footer
+\cfoot*{} % Centre footer
+
+%----------------------------------------------------------------------------------------
+%	JAVA CODE STYLE
+%----------------------------------------------------------------------------------------
+
+\lstdefinestyle{javaCodeStyle}{
+	language=Java, % Use Java functions/syntax highlighting
+	frame=single, % Frame around the code listing
+	showspaces=false,
+	showtabs=false,
+	breakatwhitespace=true,
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	commentstyle=\color{pgreen},
+	keywordstyle=\color{pblue},
+	stringstyle=\color{pred},	
+	basicstyle=\scriptsize,
+	showstringspaces=false, % Don't put marks in string spaces
+	numbers=left, % Line numbers on left
+	numberstyle=\tiny, % Line numbers styling
+}
+
+\lstset{style=javaCodeStyle}
+
+%----------------------------------------------------------------------------------------
+%	New Commands
+%----------------------------------------------------------------------------------------
+%Define texttt with hyphenation enabled
+\DeclareTextFontCommand{\mytexttt}{\ttfamily\hyphenchar\font=45\relax}
+
+%For code in text
+\newcommand{\code}[1]{\mytexttt{#1}}
+
+%Prevent dots in TOC
+\renewcommand{\cftdot}{}
+
+%SubItem for Itemize
+\newcommand{\subItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}

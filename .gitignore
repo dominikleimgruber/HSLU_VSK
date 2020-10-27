@@ -1,0 +1,10 @@
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz
+*.toc
+.DS_Store
+00_Doc/main.pdf
