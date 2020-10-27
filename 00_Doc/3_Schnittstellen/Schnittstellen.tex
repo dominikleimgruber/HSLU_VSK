@@ -17,7 +17,21 @@ Die folgenden externen Schnittstellen sind im Projekt enthalten:
 \end{figure}
 Das Logger-Interface, über welches verschiedenste Applikationen Log-Einträge erfassen können enthält insgesamt acht Methoden. Für die einzelnen Log-Levels existieren eigene Methoden. Des Weiteren enthält das Logger-Interface eine Methode zur Setzung des minimalen Log-Levels. 
 \subsubsection{LoggerSetup}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{3_Schnittstellen/Bilder/loggerSetupInterface.png}
+	\caption{LoggerSetup Klassendiagram}
+	\label{fig:LoggerSetup Klassendiagramm}
+\end{figure}
+Das LoggerSetup-Interface enthält neun Methoden, welche für die Erstellung eines voll funktionsfähigen Loggers benötigt werden. So muss definiert werden, wie die Server-IP-Adresse und dessen Port gesetzt werden kann. Des Weiteren kann bereits definiert werden, welcher minimale Log-Level der Logger zu Beginn besitzt. Der Logger-Name soll ebenfalls über eine Setter-Methode gesetzt werden können. Die wichtigste Methode ist die Factory-Methode createLogger, welche einen Logger vom Interfacetyp Logger zurückgeben soll.
 \subsubsection{LogLevel}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\textwidth]{3_Schnittstellen/Bilder/logLevel.png}
+	\caption{Log-Level Klassendiagram}
+	\label{fig:Log-Level Klassendiagramm}
+\end{figure}
+Die Log-Level Enumeration definiert die möglichen Log-Level, durch die klare Definition der Log-Level ist ein Austausch der Logger-Komponente möglich. Die Enumeration enthält ebenfalls einen numerischen Wert, um die Überprüfung des minimalen Log-Level möglichst einfach und performant zu gestalten.
 \subsubsection{StringPersistor}
 
 \subsection{Interne Schnittstellen}
