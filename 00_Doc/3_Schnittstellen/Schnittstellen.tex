@@ -33,7 +33,14 @@ Das LoggerSetup-Interface enthält neun Methoden, welche für die Erstellung ein
 \end{figure}
 Die Log-Level Enumeration definiert die möglichen Log-Level, durch die klare Definition der Log-Level ist ein Austausch der Logger-Komponente möglich. Die Enumeration enthält ebenfalls einen numerischen Wert, um die Überprüfung des minimalen Log-Level möglichst einfach und performant zu gestalten.
 \subsubsection{StringPersistor}
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{3_Schnittstellen/Bilder/stringPersistorInterface.png}
+	\caption{StringPersistor-Interface Klassendiagram}
+	\label{fig:StringPersistor-Interface Klassendiagramm}
+\end{figure}
+Das StringPersistor-Interface gibt Methoden zur Speicherung von Strings in eine Datei vor. Das Format dieser Datei ist jedoch nicht durch das Interface vorgegeben. Mit der setFile()-Methode soll definiert werden, in welche Datei die Strings gespeichert werden sollen. Die tatsächliche save-Methode verlangt einen Instant-Zeitstempel und den String der gespeichert werden soll. So soll jede String-Speicherung einer Zeit zugeordnet werden können. Da es sich um ein StringPersistor-Interface handelt, existiert auch eine Methode, die eine Liste von Strings wieder zurückgeben soll.
+\newpage
 \subsection{Interne Schnittstellen}
 Die folgenden internen Schnittstellen wurden durch das Projektteam definiert: 
 \begin{enumerate}
