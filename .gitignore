@@ -24,4 +24,5 @@
 *.synctex.gz
 *.toc
 .DS_Store
-00_Doc/main.pdf
+00_SysSpec/main.pdf
+1_ProjectManagementPlan/main.pdf
