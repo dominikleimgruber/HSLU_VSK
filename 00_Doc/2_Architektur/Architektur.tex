@@ -24,13 +24,24 @@ Die Klasse LoggerFactory implementiert das zur Verfügung gestellte Interface Lo
 
 \newpage
 \subsubsection{Logger}
-Die Klasse BaseLogger implementiert das zur Verfügung gestellte Interface Logger. Aufgrund dessen besitzt die Klasse alle Methoden, um als Logger fungieren zu können. In der privaten Methode maybeLog() wird eine Überprüfung durchgeführt, welche mit Hilfe des minimalen Log-Levels entscheidet, ob eine Nachricht geloggt werden soll oder nicht. Soll eine Nachricht geloggt werden, wird in der Methode createLogMessage() ein Objekt der Klasse LogMessage instantiert und alle notwendigen Informationen diesem Objekt beigefügt. Schliesslich wird die Nachricht seralisiert und dem ClientSocket zum Senden übergeben. Aufgrund der Seralisierung implementiert die LogMessage-Klasse das Serializable-Interface.
+Die Klasse BaseLogger implementiert das zur Verfügung gestellte Interface Logger. Aufgrund dessen besitzt die Klasse alle Methoden, um als Logger fungieren zu können. In der privaten Methode maybeLog() wird eine Überprüfung durchgeführt, welche mit Hilfe des minimalen Log-Levels entscheidet, ob eine Nachricht geloggt werden soll oder nicht. Soll eine Nachricht geloggt werden, wird in der Methode createLogMessage() ein Objekt der Klasse LogMessage instantiert und alle notwendigen Informationen diesem Objekt beigefügt. Schliesslich wird die Nachricht dem ClientSocket zum Senden übergeben. Da sie dort serialisiert wird, implementiert die LogMessage-Klasse das Serializable-Interface.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{2_Architektur/Bilder/loggerClasses.png}
 	\caption{Logger Klassendiagramm}
 	\label{fig:Logger Klassendiagramm}
+\end{figure}
+
+
+\subsubsection{ClientSocket}
+Der ClientSocket ist zuständig für die Kommunikation mit dem Logger-Server. Diese Kommunikation läuft mithilfe einer Socket Instanz über TCP/IP ab. Die Methode sendData() öffnet die Socket-Verbindung und serialisiert die mitgegebene LogMessage, welche anschliessend gesendet wird. Zum Schluss wird die Socket-Verbindung wieder geschlossen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{2_Architektur/Bilder/clientSocket.png}
+	\caption{ClientSocket Klassendiagramm}
+	\label{fig:ClientSocket Klassendiagramm}
 \end{figure}
 
 \newpage

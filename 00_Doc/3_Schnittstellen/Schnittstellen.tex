@@ -54,5 +54,12 @@ Die folgenden internen Schnittstellen wurden durch das Projektteam definiert:
 \subsubsection{LogMessage}
 \subsubsection{LogPersistor}
 \subsubsection{TCP / IP}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.2\textwidth]{3_Schnittstellen/Bilder/tcpip.png}
+	\caption{TCP/IP Schnittstelle}
+	\label{fig:TCP/IP Klassendiagramm}
+\end{figure}
+Das TCP/IP Protokoll wird verwendet, um die Kommunikation ziwschen dem ClientSocket und dem ServerSocket herzustellen. Der ServerSocket wartet in seiner listen() Methode auf einen ClientSocket und nimmt dessen Verbindung an.
 \subsubsection{client.properties}
 \subsubsection{server.properties}
