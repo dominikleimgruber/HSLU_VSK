@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This template originates from:
+% http://www.LaTeXTemplates.com
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrartcl} % Font size
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{	
+	\begin{figure}[h]
+		\begin{flushright}
+			\includegraphics[width=0.2\textwidth]{Bilder/hsluLogo.eps}			
+		\end{flushright}
+	\end{figure}
+	\vspace{10pt} % Whitespace
+	\normalfont\normalsize
+	\textsc{Hochschule Luzern - Informatik}
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{0.5pt}\\ % Thin top horizontal rule
+	{\huge Message-Logger}\\
+	{\huge Projektmanagement-Plan}\\ % The assignment title
+	\vspace{10pt} % Whitespace	
+	{\large Verteilte Systeme und Komponenten }
+	\vspace{12pt} % Whitespace
+	\rule{\linewidth}{2pt}\\ % Thick bottom horizontal rule
+	\vspace{12pt} % Whitespace
+}
+
+\author{\Large Amstutz Oliver, Brun Joel, Hunkeler Sandro, Leimgruber Dominik} % Your name
+
+\date{\normalsize\today} % Today's date (\today) or a custom date
+
+
+\begin{document}
+\maketitle % Print the title
+\pagestyle{fancy}
+\thispagestyle{empty}
+\setcounter{page}{0}
+\newpage
+\begin{center}
+	\begin{tabularx}{\textwidth}{|r|r|l|X|l|}
+		\hline
+		\textbf{Rev.} & \textbf{Datum} & \textbf{Autor} & \textbf{Bemerkungen} & \textbf{Status}  \\ 
+		\hline
+		0.1 & 05. Okt. 2020 & Dominik Leimgruber & Grundstruktur erstellt & Fertig \\
+		\hline
+	\end{tabularx}
+\end{center}
+\listoffigures
+\listoftables
+\newpage
+\tableofcontents
+
+\newpage
+
+\include{1_Projektorganisation/projektorganisation}
+\include{2_Projektfuehrung/projektfuehrung}
+\include{3_Projektunterstuetzung/projektuntestuetzung}
+\include{4_Teststrategie/teststrategie}
+\include{10_Appendix/appendix}
+
+
+%\include{9_Template/template}
+
+%%%%%bib/nomencl/list of fig/tabs
+\bibliography{./bibtex/refs}
+\bibliographystyle{plain} %ieeetr}
+
+\end{document}
