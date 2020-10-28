@@ -1,1 +1,117 @@
 \section{Anhang}
+\subsection{Sprint 1}
+\subsubsection{Sprintziel}
+Ziel dieses Sprints ist es eine Fertige Logger-Komponente mit den entsprechenden Interfaces zu erstellen. Sie sollte die gewünschten Logs korrekt in der Konsole anzeigen. 
+\subsubsection{Risiko-Update}
+Das Schadensausmass der Risiken 1-3 erhöht sich leicht. 
+Beim Datenverlust könnte der gesamte fortschritt und/oder die Dokumentation verloren gehen. 
+Sofern ein Mitglied des Entwicklerteams einen teil des Codes geschrieben hat und direkt danach ausfällt, könnten die anderen Teammitglieder bei anfälligen Verständnisschwierigkeiten keine Rückfragen stellen.
+Wird die Anforderungen an das Ziel des Logins geändert (Error / Debug) muss dies im kompletten Projekt entsprechend geändert werden. 
+\subsubsection{Sprintbackog}
+%\begin{center}
+	\begin{tabularx}{\textwidth}{|p{0.85\textwidth}|c|}
+		\hline
+		\textbf{Backlog item} & \textbf{Sprint} \\
+		\hline
+		Product Backlog erfassen & -\\
+		\hline
+		Projektmanagementplan erfassen & -\\
+		\hline
+		Risikoanalyse & -\\
+		\hline
+		Message-Level definieren & 1\\
+		\hline
+		Logger Interface definieren & 1 \\
+		\hline
+		Logger Interface implementieren & 1\\
+		\hline
+		Logger Setup Interface definieren & 1\\
+		\hline
+		Logger Setup Interface implementieren & 1\\
+		\hline
+		StringPersistor File Komponente inplementieren & \\
+		\hline
+		MessageFormating implementieren & \\
+		\hline
+		Plattformunabhängigkeit realisieren & \\
+		\hline
+		Logger-Server implementieren & \\
+		\hline
+		Kommunikation zum Logger-Server implementieren & \\
+		\hline
+	\end{tabularx}
+%\end{center}
+\subsubsection{Sprintreview}
+Geschätzte Zeit: 2d 1h 30m \\
+Verwendete Zeit: 2d 45m \\
+\url{https://gitlab.enterpriselab.ch/groups/vsk-20hs01/g04/-/milestones/1} 
+\subsubsection{Retrospektive}
+Die grössten Probleme hatten wird beim Implementieren der Interface, weil wir dort nicht überall einverstanden waren und Änderungen vorgeschlagen haben. Dort mussten wir dann teilweise auf die Antwort warten. Was nicht geändert wurde mussten wir dann entsprechend dem Interface programmieren. 
+\newpage
+\subsection{Sprint 2}
+\subsubsection{Sprintziel}
+Ziel dieses Sprints ist es eine Fertige Logger-Komponente die mittels TCP die Logs auf einen Logger Server überträgt. Auf diesem werden wiederum mittels dem StringPersistor die Log in Files geschrieben.
+\subsubsection{Risiko-Update}
+Aufgrund des Fortschritts im Projekt entsteht ein neues Risiko: 
+%\begin{center}
+	\begin{tabularx}{\linewidth}{|c|X|c|c|c|} 		
+		\hline
+		\textbf{Nr.} & \textbf{Risikobeschreibung}  & \begin{tabular}[c]{@{}c@{}} \textbf{Eintritts-}\\ \textbf{wahrscheinlichkeit} \end{tabular} & \textbf{Schadenausmass} & \begin{tabular}[c]{@{}c@{}} \textbf{Risiko} \\ \textbf{(E x S)} \end{tabular}  \\ 
+		\hline
+		1   & Änderungen am Logger und LoggerSetup Interface & 3 & 3 & 9 \\ 
+		\hline
+	\end{tabularx}
+%\end{center}
+%\begin{center}
+	\begin{tabularx}{\linewidth}{|c|X|c|c|c|c|c|r|}
+		\hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}\textbf{Risiko}\\ \textbf{Nr.}\end{tabular}} & \multirow{2}{*}{\textbf{Ergriffene Massnahmen}} & \multicolumn{2}{c|}{\begin{tabular}[c]{@{}c@{}}\textbf{Eintritts-}\\ \textbf{wahrscheinlichkeit}\end{tabular}} & \multicolumn{2}{c|}{\textbf{Schadenausmass}} & \multicolumn{2}{c|}{\textbf{Risiko}} \\ \cline{3-8} 
+		&  & \textbf{alt} & \textbf{neu} & \textbf{alt} & \textbf{neu} & \textbf{alt} & \textbf{neu} \\ \hline
+		5 & Eintrittswahrscheinlichkeit:
+		Die Eintrittswahrscheinlichkeit kann nicht verringert werden.
+		Schadenausmass: Pufferzeit einrechnen für allfällige Änderungen. 
+		& 3 & 3 & 3 & 2 & 9 & 6 \\ \hline
+	\end{tabularx}
+%\end{center}
+\subsubsection{Sprintbackog}
+%\begin{center}
+	\begin{tabularx}{\textwidth}{|p{0.85\textwidth}|c|}
+		\hline
+		\textbf{Backlog item} & \textbf{Sprint} \\
+		\hline
+		Product Backlog erfassen & -\\
+		\hline
+		Projektmanagementplan erfassen & -\\
+		\hline
+		Risikoanalyse & -\\
+		\hline
+		Message-Level definieren & 1\\
+		\hline
+		Logger Interface definieren & 1 \\
+		\hline
+		Logger Interface implementieren & 1\\
+		\hline
+		Logger Setup Interface definieren & 1\\
+		\hline
+		Logger Setup Interface implementieren & 1\\
+		\hline
+		ClientSocket anpassen & 2\\ 
+		\hline
+		StringPersistor File Komponente inplementieren & 2 \\
+		\hline
+		MessageFormating implementieren & 2 \\
+		\hline
+		Plattformunabhängigkeit realisieren & 2 \\
+		\hline
+		Logger-Server implementieren & 2 \\
+		\hline
+		Kommunikation zum Logger-Server implementieren & 2 \\
+		\hline
+	\end{tabularx}
+%\end{center}
+\subsubsection{Sprintreview}
+Geschätzte Zeit: 3d 5h 30m\\ 
+Verwendete Zeit: -\\
+\url{https://gitlab.enterpriselab.ch/groups/vsk-20hs01/g04/-/milestones/2}
+
+\subsubsection{Retrospektive}
