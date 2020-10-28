@@ -18,16 +18,17 @@ Folgende Meilensteine sind gemäss Zeitstrahl zu erreichen.
 		\hline
 		\textbf{Schlussabgabe} & Sprint 4 abgeschlossen. Nachgeführte Softwarespezifikation liegt vor und ist reviewed. Alle Komponenten sind lauffähig und demonstrierbar. Interoperabilität der Logger-Komponente ist entwickelt und demonstrierbar.. \\
 		\hline
+		\caption{Meilensteine}\label{meilensteine}\\
 	\end{tabularx}
 \end{center}
 \subsection{Projektkontrolle}
 \textcolor{red}{needs to be done, link zum burndownchart}
+\newpage
 \subsection{Risikomanagement}
 Folgende Auflistung zeigt die bekannten und relevanten Risiken, welche durch die Eintrittswahrscheinlichkeit und das Schadenausmass quantifiziert werden. Die Eintrittswahrscheinlichkeit wird numerisch mit einer Skala von 1 (unwahrscheinlich) bis 5 (mit grosser Wahrscheinlichkeit) dargestellt. Ebenso wird das Schadenausmass mit einer solchen Skala von 1 (harmloser Schaden) bis 5 (erheblicher Schaden) definiert.
 
-\begin{table}[h]
-	\centering
-	\begin{tabular}{!{\color{black}\vrule}l!{\color{black}\vrule}l!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}} 
+\begin{center}
+	\begin{tabularx}{\linewidth}{|c|X|c|c|c|} 		
 		\hline
 		\textbf{Nr.} & \textbf{Risikobeschreibung}  & \begin{tabular}[c]{@{}c@{}} \textbf{Eintritts-}\\ \textbf{wahrscheinlichkeit} \end{tabular} & \textbf{Schadenausmass} & \begin{tabular}[c]{@{}c@{}} \textbf{Risiko} \\ \textbf{(E x S)} \end{tabular}  \\ 
 		\hline
@@ -39,9 +40,10 @@ Folgende Auflistung zeigt die bekannten und relevanten Risiken, welche durch die
 		\hline
 		4   & Ausfall des Kommunikationskanals & 1 & 5 & 5 \\
 		\hline
-	\end{tabular}
-\end{table}
-\newpage
+		\caption{Risikoanalyse}\label{risikoanalyse}\\
+	\end{tabularx}
+\end{center}
+
 In der folgenden Tabelle werde die ergriffenen Mitigationsmassnahmen zu den oben erwähnten Risiken aufgelistet. Ebenfalls wird das Risiko neu geschätzt.
 \begin{center}
 		\begin{tabularx}{\linewidth}{|c|X|c|c|c|c|c|r|}
@@ -52,7 +54,8 @@ In der folgenden Tabelle werde die ergriffenen Mitigationsmassnahmen zu den oben
 			Meetings via Zoom und Einhaltung der Hygienevorschriften.
 			S: Sorgfältige Planung der Arbeiten, Pufferzeit einrechnen.
 			 & 3 & 2 & 4 & 3 & 12 & 6 \\ \hline
-			2 &E: Wahl des Speicherorts.S: Nutzung eines Versionsverwaltungstools zur Verhinderung von Mergekonflikten
+			2 &E: Wahl des Speicherorts.
+S: Nutzung eines Versionsverwaltungstools zur Verhinderung von Mergekonflikten
 			  & 2 & 1 & 5 & 2 & 10 & 2 \\ \hline
 			3 & E: kann nicht beeinflusst werden.
 			S: Änderungen immer direkt im Produktbacklog festhalten und priorisieren.
@@ -60,6 +63,7 @@ In der folgenden Tabelle werde die ergriffenen Mitigationsmassnahmen zu den oben
 			4 & E: kann nicht beeinflusst werden. 
 			S: Alternative Kommunikationskanäle konfigurieren.
 			 & 1 & 1 & 5 & 1 & 5 & 1 \\ \hline
+			 \caption{Risiken nach Mitigationen}\label{mitigationtable}\\
 		\end{tabularx}%
 \end{center}
 
@@ -68,7 +72,8 @@ Folgende Punkte müssen nach Vollendung eines Sprints erarbeitet sein, dass dies
 \begin{itemize}
 	\item Funktionalität vollständig implementiert und integriert
 	\item Unit-Tests geschrieben und durchgeführt, mit einer Testabdeckung von mindestens 70%
-	\itemFunktionsfähigkeit bereits existierender Unit-Tests geprüft
+	\item
+Funktionsfähigkeit bereits existierender Unit-Tests geprüft
 	\item Keine bekannten Fehler
 	\item JavaDoc vollständig
 	\item Alle Änderungen wurden dokumentiert
