@@ -52,14 +52,43 @@ Die folgenden internen Schnittstellen wurden durch das Projektteam definiert:
 \end{enumerate}
 
 \subsubsection{LogMessage}
+
+Abbildung \ref{fig:LogMessage} zeigt die LogMessage Klasse welche die \textit{Serializable} Schnittstelle implementiert. Sie bildet das Paket der eigentlichen Aufzeichnung inklusive Meta Daten. Die Meta Daten beinhalten:
+
+\begin{itemize}
+	\item Wann der Log verfasst wurde.
+	\item Wann der Log bei der erhalten worden ist.
+	\item Allfällige Exceptions.
+	\item Die Quelle der Log Nachricht in Form eines \textit{InetAddress} Objektes.
+\end{itemize}
+
+Die LogMessage wird Stellvertretend für die eigentliche Aufzeichnung nach erhalten der Nachricht weiterverwendet.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{3_Schnittstellen/Bilder/logMessage.png}
+	\caption{LogMessage class with implmented interface}
+	\label{fig:LogMessage}
+\end{figure}
+
 \subsubsection{LogPersistor}
+Die LogPersistor Schnittstelle, abgebildet in Abbildung \ref{fig:Adapterpattern}, kanalisiert die Möglichkeiten vom \textit{StringPersistor} Interface auf deren Verwendung. Die \textit{LogPersistor} Schnittstelle besteht aus einer Methode \textit{save}, welche das Objekt von Typ \textit{LogMessage} entgegennimmt und persistent abspeichert.
+
 \subsubsection{TCP / IP}
+Das TCP/IP Protokoll, abstrakt dargestellt in Abbildung \ref{fig:TCP/IP Klassendiagramm}, wird verwendet, um die Kommunikation zwischen dem \textit{ClientSocket} und dem \textit{ServerSocket} herzustellen. Der \textit{ServerSocket} wartet in seiner \textit{listen()} Methode auf einen \textit{ClientSocket} und nimmt dessen Verbindung an.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.2\textwidth]{3_Schnittstellen/Bilder/tcpip.png}
 	\caption{TCP/IP Schnittstelle}
 	\label{fig:TCP/IP Klassendiagramm}
 \end{figure}
-Das TCP/IP Protokoll wird verwendet, um die Kommunikation ziwschen dem ClientSocket und dem ServerSocket herzustellen. Der ServerSocket wartet in seiner listen() Methode auf einen ClientSocket und nimmt dessen Verbindung an.
+
 \subsubsection{client.properties}
+Die client.properties bestehen aus den notwendigen Angaben um den Client mit dem Logger zu verbinden. Konkret bedeutet dies:
+\begin{itemize}
+	\item Definition des \textit{ServerFactory} Klassen Namen, damit die \textit{LoggerSetupFactory} das \textit{LoggerSetup} Objekt erstellen kann.
+\end{itemize}
+
 \subsubsection{server.properties}
+Die server.properties besteht aus dem server socket port, welcher den Port vom Server vordefiniert.
+
